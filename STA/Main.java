@@ -2,7 +2,7 @@
  import java.lang.*;
  
 public class Main {
-FileResource fr = new FileResource("brca1line.fa");  
+//FileResource fr = new FileResource("brca1line.fa");  
     public void Main(){
      
      
@@ -11,7 +11,11 @@ FileResource fr = new FileResource("brca1line.fa");
         
         //System.out.println(cgRatio(dna));
         //System.out.println(countCTG(dna));
-         processGenes(fr);
+        //System.out.println(HOW RIGHT HERE?);
+        //testProcessGenes() takes the fileresource and converts it into a 
+        //storageresource.
+        //processgenes takes a SR and processes it. 
+        //How would i call the two in main?
                  
         
         
@@ -51,19 +55,25 @@ public float countCTG(String dna){
  
 }
 
- //}
- //public class FileResource {
-     
-      
-public void processGenes(FileResource fr){
-fr = new FileResource("brca1line.fa"); 
+FileResource fr = new FileResource("brca1line.fa");
+
+public StorageResource testProcessGenes(FileResource fr){   
+    StorageResource sr = new StorageResource();
+    for (String temp : fr.lines()){
+    //System.out.println(temp);
+    sr.add(temp);
+    }
+    return sr;
+}
+
+public void processGenes(StorageResource sr){
 int overnine = 0;
 int over35 = 0;
 int maxLength = 0;
 String longestLine = null;
 //String sft = fr.asString();
-for (String line : fr.lines()) {
-    if(line.length() > 9){
+for (String line : sr.data()) {
+    if(line.length() > 60){
         overnine++;        
         System.out.println(line);}        
     if(cgRatio(line) > .35){
