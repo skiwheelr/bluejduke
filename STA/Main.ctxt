@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Main
+comment1.params=
+comment1.target=void\ Main()
+comment2.params=dna
+comment2.target=int\ cgRatio(java.lang.String)
+comment3.params=dna
+comment3.target=float\ countCTG(java.lang.String)
+comment4.params=fr
+comment4.target=void\ processGenes(edu.duke.FileResource)
+numComments=5
