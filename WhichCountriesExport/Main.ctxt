@@ -4,4 +4,7 @@ comment1.params=args
 comment1.target=void\ main(java.lang.String[])
 comment2.params=
 comment2.target=void\ tester()
-numComments=3
+comment3.params=parser\ country
+comment3.target=java.lang.String\ countryInfo(org.apache.commons.csv.CSVParser,\ java.lang.String)
+comment3.text=\ public\ String\ countryInfo(CSVParser\ parser,\ String\ dataLine){\n\ \ \ \ \ \ \ \ FileResource\ fr\ \=\ new\ FileResource();\n\ \ \ \ \ \ \ \ parser\ \=\ fr.getCSVParser();\n\ \ \ \ \ \ \ \ for\ (CSVRecord\ ghost\ \:\ parser)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ dataLine\ \=\ ghost.get("Country")\ +\ "\:"\ +\ ghost.get("Exports")\ +\ "\:"\ +\ ghost.get("Value(dollars)");\n\ \ \ \ \ \ \ \ \ \ \ \ System.out.println(dataLine);\n\t\t}\n\treturn\ dataLine;\n\ \ \ \ }\ \n
+numComments=4

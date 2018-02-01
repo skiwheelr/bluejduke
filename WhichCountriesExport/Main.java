@@ -12,6 +12,10 @@ public class Main {
     //lister.whoExportsCoffee();
     System.out.println("Mainrunning");
     //System.out.println(countryInfo());
+
+    
+
+    
     
     
     }
@@ -19,27 +23,32 @@ public class Main {
     public void tester(){
         FileResource fr = new FileResource();
         CSVParser parser = fr.getCSVParser();
+        System.out.println(countryInfo(parser, "Germany"));
 
     }
-    
-    /* public String countryInfo(CSVParser parser, String Country){
-        String info = null;
+    /* public String countryInfo(CSVParser parser, String dataLine){
         FileResource fr = new FileResource();
         parser = fr.getCSVParser();
-        for (CSVRecord record : parser) {
-            String countryInfo = record.get("Country")+":"+ record.get("Exports")+":"+ record.get("Value (dollars)");
-            System.out.println(countryInfo);
-            
-
-            
+        for (CSVRecord ghost : parser) {
+            dataLine = ghost.get("Country") + ":" + ghost.get("Exports") + ":" + ghost.get("Value(dollars)");
+            System.out.println(dataLine);
 		}
-	return info;
-    
-    } */
-    
-    
-    
-    
+	return dataLine;
+    } 
+    */
+   public String countryInfo(CSVParser parser, String country){
+		try{
+			for(CSVRecord record: parser.getRecords()){
+				if(record.get("Country").equals(country)){
+					String info = "";
+					info += record.get(0) + ": " + record.get(1) + ": " + record.get(2);
+					return info;
+				}
+			}
+		} catch (IOException e){}
+		
+		return "NOT FOUND";
+	}
 }
 
 
