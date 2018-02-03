@@ -6,5 +6,11 @@ comment2.params=
 comment2.target=void\ tester()
 comment3.params=parser\ country
 comment3.target=java.lang.String\ countryInfo(org.apache.commons.csv.CSVParser,\ java.lang.String)
-comment3.text=\ public\ String\ countryInfo(CSVParser\ parser,\ String\ dataLine){\n\ \ \ \ \ \ \ \ FileResource\ fr\ \=\ new\ FileResource();\n\ \ \ \ \ \ \ \ parser\ \=\ fr.getCSVParser();\n\ \ \ \ \ \ \ \ for\ (CSVRecord\ ghost\ \:\ parser)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ dataLine\ \=\ ghost.get("Country")\ +\ "\:"\ +\ ghost.get("Exports")\ +\ "\:"\ +\ ghost.get("Value(dollars)");\n\ \ \ \ \ \ \ \ \ \ \ \ System.out.println(dataLine);\n\t\t}\n\treturn\ dataLine;\n\ \ \ \ }\ \n
-numComments=4
+comment3.text=\ public\ String\ countryInfo(CSVParser\ parser,\ String\ dataLine){\n\ \ \ \ \ \ \ \ FileResource\ fr\ \=\ new\ FileResource();\n\ \ \ \ \ \ \ \ parser\ \=\ fr.getCSVParser();\n\ \ \ \ \ \ \ \ for\ (CSVRecord\ ghost\ \:\ parser)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ dataLine\ \=\ ghost.get("Country")\ +\ "\:"\ +\ ghost.get("Exports")\ +\ "\:"\ +\ ghost.get("Value(dollars)");\n\ \ \ \ \ \ \ \ \ \ \ \ System.out.println(dataLine);\n\ \ \ \ \ \ \ \ }\n\ \ \ \ return\ dataLine;\n\ \ \ \ }\ \n
+comment4.params=parser\ exportItem1\ exportItem2
+comment4.target=void\ listExportersTwoProducts(org.apache.commons.csv.CSVParser,\ java.lang.String,\ java.lang.String)
+comment5.params=parser\ exportItem
+comment5.target=int\ numberOfExporters(org.apache.commons.csv.CSVParser,\ java.lang.String)
+comment6.params=parser\ amount
+comment6.target=void\ bigExporters(org.apache.commons.csv.CSVParser,\ java.lang.String)
+numComments=7
