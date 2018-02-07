@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=CSVMin
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=CSVMin()
+comment3.params=parser
+comment3.target=org.apache.commons.csv.CSVRecord\ coldestHourInFile(org.apache.commons.csv.CSVParser)
+comment4.params=fileName
+comment4.target=void\ testColdestDay(java.lang.String)
+comment5.params=
+comment5.target=org.apache.commons.csv.CSVRecord\ coldestInManyDays()
+comment6.params=currentRow\ smallestSoFar
+comment6.target=org.apache.commons.csv.CSVRecord\ getSmallestOfTwo(org.apache.commons.csv.CSVRecord,\ org.apache.commons.csv.CSVRecord)
+comment7.params=
+comment7.target=void\ testcoldestInManyDays()
+comment8.params=parser
+comment8.target=double\ averageTemperatureInFile(org.apache.commons.csv.CSVParser)
+comment8.text=\n\ public\ double\ avgTemp(CSVParser\ parser){\n\ \ CSVRecord\ avgSoFar\ \=\ null;\n\ \ for\ (CSVRecord\ currentRow\ \:\ parser)\ {\n\ \ \ \ \ \ \n\ \ \ \ \ \ \ \ if\ (avgSoFar\ \=\=\ null)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ avgSoFar\ \=\ currentRow;\ \ \n\ \ \ \ \ \ \ \ }\ \n\ \ \ \ \ \ \ \ else\n\ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ double\ currentTemp\ \=\ Double.parseDouble(currentRow.get("TemperatureF"));\n\ \ \ \ \ \ \ double\ avgNow\ \=\ Double.parseDouble(avgSoFar.get("TemperatureF"));\n\ \ \ \ \ \ \ double\ newAvg\ \=\ ((currentTemp\ +\ avgNow)\ /\ 1);\n\ \ \ \ \ \ \ }\ \ \ \n\ \ \ \ }\ \ \ \ \ \n\ \ //return\ newAvg;\ \n\ \ return\ 0;\n\ \ \n\ \ \ \ }\n\ \ \ \ \n\ public\ void\ testAvgTemp(){\n\ \ \ \ \ //CSVRecord\ avg\ \=\ avgTemp();\n\ \ \ \ \ FileResource\ fa\ \=\ new\ FileResource("nc_weather/2014/weather-2014-01-08.csv");\n\ \ \ \ \ double\ avg\ \=\ avgTemp(fa.getCSVParser());\n\ \ \ \ \ \n\ \ \ \ \ System.out.println("Avg\ was\ "\ +\ avg);\n\ \ \ \ }\n
+comment9.params=
+comment9.target=void\ testAverageTemperatureInFile()
+numComments=10
